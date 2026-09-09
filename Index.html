@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevBook Pro - Plantilla Premium para Gumroad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 antialiased min-h-screen">
+
+  <!-- Navegación -->
+  <nav class="fixed w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-md z-40 border-b border-slate-200/60 dark:border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-500 flex items-center justify-center text-white font-black text-sm shadow-md">
+          D
+        </div>
+        <span class="font-black text-xl tracking-tight bg-gradient-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent">DevBook.</span>
+      </div>
+      
+      <div class="flex items-center space-x-4">
+        <a href="#features" class="hidden md:inline hover:text-violet-600 dark:hover:text-violet-400 text-sm font-semibold transition">Características</a>
+        <a href="#modules" class="hidden md:inline hover:text-violet-600 dark:hover:text-violet-400 text-sm font-semibold transition">Contenido</a>
+        <a href="#faq" class="hidden md:inline hover:text-violet-600 dark:hover:text-violet-400 text-sm font-semibold transition">FAQ</a>
+        
+        <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:ring-2 ring-violet-400 text-slate-600 dark:text-slate-300 transition">
+          <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden"></i>
+          <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
+        </button>
+
+        <button onclick="toggleModal(true)" class="bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-violet-500/25 transition">
+          Obtener $19
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="pt-36 pb-20 px-6 max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 bg-violet-100 dark:bg-violet-950/80 border border-violet-200 dark:border-violet-800/50 text-violet-700 dark:text-violet-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6">
+      <span class="w-2 h-2 rounded-full bg-violet-500 animate-pulse"></span> Edición 2026
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+      Lanza tu producto digital <br class="hidden sm:inline">
+      <span class="bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-500 bg-clip-text text-transparent">en tiempo récord</span>
+    </h1>
+
+    <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-normal">
+      Una plantilla HTML/CSS hiper-optimizada, con soporte nativo para Modo Oscuro y lista para integrarse con Stripe o Gumroad.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <button onclick="toggleModal(true)" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white font-extrabold px-8 py-4 rounded-xl shadow-xl shadow-violet-500/20 transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-rocket"></i> Comprar Plantilla ($19)
+      </button>
+      <a href="#features" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/80 font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-eye"></i> Explorar Detalles
+      </a>
+    </div>
+  </header>
+
+  <!-- Sección de Características -->
+  <section id="features" class="py-20 bg-white dark:bg-slate-900/50 border-y border-slate-200/60 dark:border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-black text-center tracking-tight mb-4">Diseñada para Convertir Visitas en Ventas</h2>
+      <p class="text-slate-500 dark:text-slate-400 text-center max-w-xl mx-auto mb-16 text-sm">Todo lo que necesitas empaquetado en un código limpio, modular y fácil de personalizar.</p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-violet-500/50 transition">
+          <div class="w-12 h-12 bg-violet-100 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Carga Ultrarrápida</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Sin librerías pesadas ni dependencias extrañas. Carga nativa inmediata.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-violet-500/50 transition">
+          <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Dark Mode Automático</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Detecta la preferencia del sistema operativo o permite al usuario cambiarla.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-violet-500/50 transition">
+          <div class="w-12 h-12 bg-purple-100 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">100% Responsiva</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Adaptación fluida para smartphones, tablets y pantallas de escritorio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulos / Temario del Producto -->
+  <section id="modules" class="py-20 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-black text-center tracking-tight mb-4">¿Qué incluye el recurso?</h2>
+    <p class="text-slate-500 dark:text-slate-400 text-center max-w-xl mx-auto mb-12 text-sm">Desglose del contenido listo para ser adaptado a tu producto digital.</p>
+
+    <div class="space-y-4">
+      <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <span class="text-violet-600 font-bold">01</span>
+          <div>
+            <h4 class="font-bold">Plantilla Base HTML5 & CSS</h4>
+            <p class="text-xs text-slate-500">Código totalmente comentado y organizado por componentes.</p>
+          </div>
+        </div>
+        <span class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full font-semibold">Incluido</span>
+      </div>
+
+      <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <span class="text-violet-600 font-bold">02</span>
+          <div>
+            <h4 class="font-bold">Script de Modo Oscuro (JS)</h4>
+            <p class="text-xs text-slate-500">Guarda la preferencia del visitante en el almacenamiento local.</p>
+          </div>
+        </div>
+        <span class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full font-semibold">Incluido</span>
+      </div>
+
+      <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <span class="text-violet-600 font-bold">03</span>
+          <div>
+            <h4 class="font-bold">Modal de Checkout e Integraciones</h4>
+            <p class="text-xs text-slate-500">Ejemplo listo para conectar enlaces de Gumroad, LemonSqueezy o Stripe.</p>
+          </div>
+        </div>
+        <span class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full font-semibold">Incluido</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios / Prueba Social -->
+  <section class="py-20 bg-slate-100 dark:bg-slate-900/30 border-y border-slate-200/60 dark:border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-black text-center tracking-tight mb-12">Lo que dicen otros creadores</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+          <div class="flex items-center space-x-1 text-amber-400 mb-3 text-xs">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 italic mb-4">"Logré publicar mi landing page en Gumroad en menos de una hora. El código es súper limpio y adaptar los textos fue rapidísimo."</p>
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 bg-violet-600 text-white rounded-full flex items-center justify-center font-bold text-xs">CM</div>
+            <div>
+              <h5 class="text-xs font-bold">Carlos M.</h5>
+              <p class="text-[10px] text-slate-400">Creador de Software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+          <div class="flex items-center space-x-1 text-amber-400 mb-3 text-xs">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 italic mb-4">"La integración con el modo oscuro y el diseño adaptativo hicieron que mis ventas de ebooks aumentaran de inmediato."</p>
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xs">A&R</div>
+            <div>
+              <h5 class="text-xs font-bold">Ana R.</h5>
+              <p class="text-[10px] text-slate-400">Diseñadora UX</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes (FAQ Accordion) -->
+  <section id="faq" class="py-20 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-black text-center tracking-tight mb-12">Preguntas Frecuentes</h2>
+
+    <div class="space-y-4">
+      <div class="border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 overflow-hidden">
+        <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-sm flex justify-between items-center">
+          <span>¿Qué archivos recibiré tras la compra?</span>
+          <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+        </button>
+        <div id="faq-answer-1" class="hidden px-5 pb-5 text-xs text-slate-500 leading-relaxed border-t border-slate-100 dark:border-slate-800/50 pt-3">
+          Recibirás un archivo comprimido .ZIP con todo el código fuente nativo (index.html, app.js), estilos Tailwind configurados por CDN e instrucciones breves.
+        </div>
+      </div>
+
+      <div class="border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 overflow-hidden">
+        <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-sm flex justify-between items-center">
+          <span>¿Necesito saber sobre servidores o Node.js para editarla?</span>
+          <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+        </button>
+        <div id="faq-answer-2" class="hidden px-5 pb-5 text-xs text-slate-500 leading-relaxed border-t border-slate-100 dark:border-slate-800/50 pt-3">
+          No. Es código nativo del lado del cliente. Solo editas el texto en HTML y puedes alojarlo gratis en GitHub Pages, Vercel o Netlify.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Interactivo de Pago -->
+  <div id="checkout-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 max-w-md w-full p-6 shadow-2xl relative">
+      <button onclick="toggleModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 bg-violet-100 dark:bg-violet-950 text-violet-600 dark:text-violet-400 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <h3 class="text-xl font-bold">Completar Orden</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Simulación de pasarela de pago</p>
+      </div>
+
+      <form id="checkout-form" onsubmit="processPayment(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Nombre Completo</label>
+          <input type="text" required placeholder="Tu Nombre" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 ring-violet-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Correo Electrónico</label>
+          <input type="email" required placeholder="correo@ejemplo.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 ring-violet-500">
+        </div>
+
+        <button type="submit" id="pay-btn" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+          <span>Pagar $19.00 USD</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-xs text-slate-400 border-t border-slate-200/60 dark:border-slate-800/60">
+    <p>© 2026 DevBook. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
